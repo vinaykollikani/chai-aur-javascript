@@ -1,2 +1,2 @@
 # chai-aur-javascript
-JavaScript course from Chai aaur JavaScript YT Channel
+JavaScript course from Chai aaur Code YT Channel

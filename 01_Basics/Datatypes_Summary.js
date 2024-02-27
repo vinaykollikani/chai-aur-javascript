@@ -72,3 +72,49 @@
 // }
 // console.log(typeof functionEx); // function -> object
 // console.log(functionEx); // [Function: functionEx]
+
+
+// ==================================
+
+// There are two types of memory 
+// 1. Stack ( Primitive )
+    //  Stack memory stores the values
+// 2. Heap ( Non-Primitive )
+    //  Heap memory stores the reference
+
+
+// ! Memory Management in JavaScript
+
+// JavaScript's memory management is handled automatically by the runtime environment, typically the JavaScript engine in web browsers or Node.js. It uses a garbage collector to manage memory, ensuring that developers do not need to manually allocate or deallocate memory.
+
+// **Memory Life Cycle**:
+// - **Allocation**: JavaScript allocates memory for objects, functions, and other data structures.
+// - **Usage**: The allocated memory is used during program execution.
+// - **Release**: Once an object or function is no longer needed, the memory it occupies is released. The JavaScript engine handles this process.
+
+// **Stack and Heap**:
+// - **Stack**: Used to store static data with a fixed size known during compile time. Static data includes primitive values (strings, numbers, boolean, null, and undefined) and references to objects and functions. This process is called static memory allocation.
+// - **Heap**: Stores dynamically allocated data, such as objects and functions. Unlike the stack, the heap doesn't allocate a fixed amount of memory; it grows as needed during runtime.
+
+// **Example**:
+// const employee = {
+//     name: 'Rajesh',
+//     age: 30,
+// };
+
+// const name = "Ram";
+
+// function getName(name) {
+//     return name;
+// }
+
+// const newEmployee = employee;
+
+// - In this example, the object 'employee' is created in the heap, and a reference to it is stored in the stack.
+
+// **Garbage Collection**:
+// - Garbage collectors release memory occupied by variables, objects, or functions that are no longer needed.
+// - Predicting when something becomes obsolete is challenging, but algorithms help identify unused memory.
+// - Reference-counting garbage collection frees memory for objects without references. However, it doesn't handle cyclic references well.
+
+// Remember, understanding memory management is crucial for optimizing performance and avoiding memory leaks in your JavaScript applications.

@@ -42,6 +42,8 @@ console.log(myVar); // Output: 5
 
 // In the above example, `myVar` is hoisted during the memory creation phase, so it exists when we first log it to the console, but it's `undefined` because no value has been assigned yet.
 
+// ++++++++++++++++++++++++++++++++++++++++++++++
+
 // TOPIC: Execution Phase
 // During the execution phase, JavaScript goes through your code line by line and runs/executes it. It assigns values to variables and executes function calls.
 
@@ -59,25 +61,41 @@ myFunc(); // Output: Function called
 
 // Remember, JavaScript is a single-threaded language, which means it executes one operation at a time, in order, from top to bottom. It first goes through the memory creation phase, and then it enters the execution phase. This is a continuous process until all the code has been executed.
 
-// JavaScript Execution Context
+// ++++++++++++++++++++++++++++++++++++++++++++++
 
-// {} Global EC (This)
-// 1 . Global Execution Context
-// 2 . Function Execution Context
-// 3 . Eval Execution Context
+// Topic: Call Stack
 
-// Memory Creation Phase
-// Execution Phase
+// The Call Stack is a mechanism JavaScript uses to keep track of function calls in your program.
 
-function one() {
-	console.log("One");
-	two();
+// Let's understand this with an example:
+
+function multiply(x, y) {
+	return x * y;
 }
-function two() {
-	console.log("Two");
-	three();
+
+function square(n) {
+	return multiply(n, n);
 }
-function three() {
-	console.log("Three");
+
+function printSquare(n) {
+	var squared = square(n);
+	console.log(squared);
 }
-// one();
+
+printSquare(5);
+
+// When you run this program, here's how the call stack changes:
+
+// 1. Initially it's empty.
+// 2. `printSquare(5)` is called and added to the call stack.
+// 3. `printSquare` calls `square(5)`, which is added to the top of the call stack.
+// 4. `square` calls `multiply(5, 5)`, which is added to the top of the call stack.
+// 5. `multiply` returns 25, so it's removed from the call stack.
+// 6. `square` returns 25, so it's removed from the call stack.
+// 7. `printSquare` logs 25 to the console, so it's removed from the call stack.
+// 8. The program ends, leaving an empty call stack.
+
+// The Call Stack is important for understanding how function calls are processed in your JavaScript code.
+
+//  ++++++++++++++++++++++++++++++++++++++++++++++ 
+

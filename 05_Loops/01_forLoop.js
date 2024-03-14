@@ -1,77 +1,98 @@
-// Topic: For Loop
-// A 'for' loop is a control flow statement that allows code to be executed repeatedly.
-// Syntax: for(initialization; condition; increment/decrement) { // code block to be executed }
-// for (let index = 0; index < array.length; index++) {
-//     const element = array[index];
-// }
-// for(let i = 0; i < 5; i++) {
-//     console.log(i);  // This will print numbers 0 through 4.
-// }
+/*
+  For Loop in JavaScript
 
-// Topic: Nested For Loop
-// A 'nested for loop' is a loop inside another loop.
+  The 'for' loop in JavaScript is used to execute a block of code repeatedly.
+  It consists of three parts: initialization, condition, and iteration.
 
-// for(let i = 0; i < 3; i++) {
-//     for(let j = 0; j < 2; j++) {
-//         console.log(`i = ${i}, j = ${j}`);  // This will print all combinations of i and j.
-//     }
-// }
+  Syntax:
+    for (initialization; condition; iteration) {
+      // code block to be executed
+    }
 
-// Topic: Break
-// The 'break' statement "jumps out" of a loop and continues executing the code after the loop.
-
-// for(let i = 0; i < 5; i++) {
-//     if(i === 3) {
-//         break;  // This will stop the loop when i equals 3.
-//     }
-//     console.log(i);  // This will print numbers 0 through 2.
-// }
-
-// Topic: Continue
-// The 'continue' statement "jumps over" one iteration in the loop and continues with the next iteration.
-
-// for(let i = 0; i < 5; i++) {
-//     if(i === 3) {
-//         continue;  // This will skip the loop iteration when i equals 3.
-//     }
-//     console.log(i);  // This will print numbers 0, 1, 2, and 4.
-// }
-
-// +++++++++++++++++++++++++++++++++++++++++++++++++++
-
-// Tables Print
-// Table of 1
-// for (let i = 1; i <= 10; i++) {
-//     console.log(`1 * ${i} = ${i * 1}`);
-// }
-// 1 - 10 Tables
-// for (let i = 1; i <= 10; i++) {
-//     console.log(`Table of ${i}`);
-//     for (let j = 1; j <= 10; j++) {
-//         console.log(`${i} * ${j} = ${i * j}`);
-//     }
-//     console.log();
-// }
-
-//
-// Topic: For Loop using Arrays
-// Arrays in JavaScript can be iterated using a 'for' loop.
-
-let array = ["a", "b", "c", "d", "e", "f", "g", "h", 1, 2, 3, 4, 5, 6];
-
-for (let i = 0; i < array.length; i++) {
-	console.log(array[i]); // This will print each element of the array.
+  Example:
+    Let's use a for loop to print numbers from 1 to 5.
+*/
+console.log("----------------------------------------------------------------");
+console.log("\t\t For Loop in JavaScript");
+console.log("----------------------------------------------------------------");
+for (let i = 1; i <= 5; i++) {
+  console.log("Iteration : " + i); // Output: 1, 2, 3, 4, 5
 }
 
-// Topic: For Loop using Objects
-// Objects in JavaScript can be iterated using a 'for...in' loop.
+/*
+  Nested For Loop in JavaScript
 
-let object = {
-	name: "John",
-	age: 30,
-	city: "New York",
-};
+  A nested for loop is a loop inside another loop. It is useful for iterating over multidimensional arrays or performing operations on nested data structures.
 
-for (let key in object) {
-	console.log(`${key}: ${object[key]}`); // This will print each key-value pair of the object.
+  Example:
+    Let's use a nested for loop to print a multiplication table.
+*/
+console.log("\n----------------------------------------------------------------");
+console.log("\t\tNested For Loop in JavaScript");
+console.log("----------------------------------------------------------------");
+for (let i = 1; i <= 2; i++) {
+  for (let j = 1; j <= 10; j++) {
+    console.log(i + " * " + j + " = " + (i * j));
+  }
+}
+
+/*
+  Break and Continue Keyword in JavaScript
+
+  - 'break': Terminates the current loop or switch statement and transfers control to the statement following the terminated statement.
+  - 'continue': Skips the current iteration of a loop and continues with the next iteration.
+
+  Example:
+    Let's use break and continue in a loop to print even numbers between 1 and 10.
+*/
+console.log("\n----------------------------------------------------------------");
+console.log("\t\t Break & Continue in JavaScript");
+console.log("----------------------------------------------------------------");
+console.log("Even numbers between 1 and 10:");
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 !== 0) {
+    continue; // Skip odd numbers
+  }
+  console.log(i);
+}
+
+/*
+  For Loop using Arrays, Objects, and Maps
+
+  - Arrays: Iterate over each element of an array.
+  - Objects: Iterate over each key-value pair of an object.
+  - Maps: Iterate over each key-value pair of a Map.
+
+  Example:
+    Let's iterate over an array, an object, and a Map using a for loop.
+*/
+
+// Array
+const fruits = ["apple", "banana", "orange"];
+console.log("\n----------------------------------------------------------------");
+console.log("\t\t For Loop in Array in JavaScript");
+console.log("----------------------------------------------------------------");
+console.log("Iterating over array:");
+for (let i = 0; i < fruits.length; i++) {
+	console.log(fruits[i]);
+}
+
+// Object
+const person = { name: "John", age: 30, city: "New York" };
+console.log("\n----------------------------------------------------------------");
+console.log("\t\t For Loop in Object in JavaScript");
+console.log("----------------------------------------------------------------");
+console.log("Iterating over object:");
+for (let key in person) {
+	console.log(key + ": " + person[key]);
+}
+
+// Map
+const colorsMap = new Map([["red", "#FF0000"], ["green", "#00FF00"], ["blue", "#0000FF"]]);
+console.log("\n----------------------------------------------------------------");
+console.log("\t\t For Loop in Maps in JavaScript");
+console.log("----------------------------------------------------------------");
+console.log("Iterating over Map:");
+for (let [key, value] of colorsMap) {
+  console.log(key + ": " + value);
 }

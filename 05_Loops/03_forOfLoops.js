@@ -11,7 +11,37 @@
   Example:
     Let's use a for...of loop to iterate over an array of numbers and print each number.
 */
+// Description
+// A for...of loop operates on the values sourced from an iterable one by one in sequential order. 
+// Each operation of the loop on a value is called an iteration, and the loop is said to iterate over the iterable. 
+// Each iteration executes statements that may refer to the current sequence value.
+const array1 = [
+	"a",
+	"b",
+	"c",
+	{
+		a: 1,
+		b: 2,
+		c: 3,
+	},
+	{
+		name: "Jarvish",
+		city: "Rayagada",
+		pin: "765001",
+	},
+];
 
+for (const element of array1) {
+	console.log(element);
+}
+// Output : 
+// > "a"
+// > "b"
+// > "c"
+// > Object { a: 1, b: 2, c: 3 }
+// > Object { name: "Jarvish", city: "Rayagada", pin: "765001" }
+
+/*
 // Array iteration
 console.log(
 	"\n----------------------------------------------------------------"
@@ -69,7 +99,7 @@ Note:
   - The for...of loop can only be used with objects that are iterable, i.e., those that have a Symbol.iterator property.
   - It does not work with plain objects because they are not iterable by default.
   - It does not provide access to the index of the elements like the traditional for loop does.
-*/
+
 
 // Custom iterable object example
 console.log(
@@ -91,40 +121,4 @@ for (const num of myIterable) {
 }
 
 // ----------------------------------------------------------------
-
-// for of
-
-["", "", ""][({}, {}, {})];
-
-const arr = [1, 2, 3, 4, 5];
-for (const num of arr) {
-	console.log(num);
-}
-
-const greetings = "Hello world!";
-for (const greet of greetings) {
-	console.log(`Each char is ${greet}`);
-}
-
-// Maps
-
-const map = new Map();
-map.set("IN", "India");
-map.set("USA", "United States of America");
-map.set("Fr", "France");
-map.set("IN", "India");
-
-// console.log(map);
-
-for (const [key, value] of map) {
-	console.log(key, ":-", value);
-}
-
-const myObject = {
-	game1: "NFS",
-	game2: "Spiderman",
-};
-
-for (const [key, value] of myObject) {
-	console.log(key, ":-", value);
-}
+*/

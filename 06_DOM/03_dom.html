@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM | JS</title>
+  <style>
+    * {
+      margin: 10px;
+      /* padding: 0; */
+      box-sizing: border-box;
+      font-size: 20px;
+      font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    }
+
+    body {
+      background-color: #212121;
+      color: #fff;
+      height: 100dvh;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="languages">
+    <li class="langNames">JavaScript</li>
+  </ul>
+</body>
+
+<script>
+  // Adding an Element : Method One
+  function addLanguageMethodOne(langName) {
+    const li = document.createElement("li");
+    li.innerText = `${langName}`;
+    const ul = document.querySelector(".languages");
+    ul.appendChild(li);
+  }
+  addLanguageMethodOne("Python");
+  addLanguageMethodOne("TypeScript");
+
+  // Adding an Element : Method Two (Optimised Method)
+  function addLanguageMethodTwo(langName) {
+    const li = document.createElement("li");
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector(".languages").appendChild(li);
+  }
+  addLanguageMethodTwo("Java")
+  addLanguageMethodTwo("Swift")
+  addLanguageMethodTwo("Swift")
+  addLanguageMethodTwo("Swift")
+
+  // Editing an Element : Method One 
+  function editLanguageMethodOne(langName) {
+    const editLi = document.querySelector('li:nth-child(2)');
+    editLi.innerHTML = `${langName}`;
+  }
+
+  // Editing an Element : Method Two
+  function editLanguageMethodTwo(langName) {
+    const editLi = document.querySelector('li:last-child');
+    const newLi = document.createElement('li');
+    newLi.textContent = `${langName}`;
+    editLi.replaceWith(newLi);
+  }
+
+  // Editing an Element : Method Three
+  function editLanguageMethodThree(langName) {
+    const editLi = document.querySelector('li:last-child');
+    editLi.outerHTML = '<li>Language 3</li>';
+  }
+  editLanguageMethodOne("Language 1");
+  editLanguageMethodTwo("Language 2");
+  editLanguageMethodThree("Language 3");
+
+  // Removing an Element 
+  function removeLanguage() {
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+  }
+  removeLanguage();
+
+  /*
+      //Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    //secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+  */
+</script>
+
+</html>

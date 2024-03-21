@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM | JavaScript</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #212121;
+      color: #fff;
+      height: 100dvh;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .parent {
+      width: 400px;
+      height: 400px;
+      border: 1px solid #fff;
+      gap: 10px;
+    }
+
+    .child {
+      width: 80px;
+      aspect-ratio: 1;
+      border: 1px solid #fff;
+    }
+  </style>
+</head>
+
+<body class="flex">
+  <div class="parent flex">
+    <div class="child flex">1</div>
+    <div class="child flex">2</div>
+    <div class="child flex">3</div>
+    <div class="child flex">4</div>
+  </div>
+</body>
+
+<script>
+  // const div = document.createElement("div");
+  // div.className = "newDiv";
+  // div.id = "newDiv";
+  // div.setAttribute("title", "HelloWorld!");
+  // div.style.backgroundColor = "red";
+  // div.style.padding = "15px";
+  // div.style.border = "1px solid red";
+  // div.style.height = "400px";
+  // div.style.width = "300px";
+  // const child = document.createElement("div");
+  // const parent = document.querySelector('.parent');
+  // child.className = "child flex";
+  // child.innerHTML = "Hello World!";
+  // parent.appendChild(child);
+</script>
+
+</html>

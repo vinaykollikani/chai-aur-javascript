@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 3px #000;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100dvh;
+  background-color: #212121;
+  color: #fff;
+  padding-top: 5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  padding: 2rem;
+  text-decoration: underline;
+  font-size: 3.6rem;
+}
+
+h2 {
+  padding: 1.6rem;
+  font-size: 2.8rem;
+}
+
+.colors_div {
+  width: 40rem;
+  border: 3px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.color_button {
+  width: 6rem;
+  aspect-ratio: 1;
+  margin: 3rem;
+  border-radius: 15%;
+  border: 3px solid #ccc;
+  box-shadow: 1px 1px 3px #000;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#teal {
+  background-color: teal;
+}
+
+#mintcream {
+  background-color: mintcream;
+}
+
+#green {
+  background-color: green;
+}
+
+#slategray {
+  background-color: slategray;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#beige {
+  background-color: beige;
+}
+
+#brown {
+  background-color: brown;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#red {
+  background-color: red;
+}
+
+#maroon {
+  background-color: maroon;
+}
+
+#pink {
+  background-color: pink;
+}

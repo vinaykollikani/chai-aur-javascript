@@ -73,6 +73,7 @@ function newGame() {
     leftChance.innerHTML = `${10}`;
     userInput.removeAttribute("disabled");
     displayMessage.innerHTML = `Try your luck...`;
+    displayMessage.style.fontSize = '12px';
     newGameButton.innerHTML = '';
     newGameButton.classList.remove('startButton');
     playGame = true;

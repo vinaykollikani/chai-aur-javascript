@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Guess Number</title>
+</head>
+
+<body>
+  <h1 class="center">Jarvish Dev | Projects</h1>
+  <h2 class="center">Guess the number</h2>
+
+  <form action="submit" class="container">
+    <!-- Label -->
+    <label for="user_input">
+      Guess the Number :
+    </label>
+    <!-- Input -->
+    <input type="number" name="user_input" id="user_input">
+    <!-- Submit Button -->
+    <button class="hover submitButton">Submit</button>
+    <!-- Display Message -->
+    <p class="resultDesc displayMessage">
+      Try your luck...
+    </p>
+    <!-- Left Chances -->
+    <p class="resultDesc">
+      Chances Left : <span class="leftChance">10</span>
+    </p>
+    <!-- Previous Guesses -->
+    <p class="resultDesc">
+      Previous Guesses : <span class="previousGuess"></span>
+    </p>
+    <!-- New Game Button -->
+    <p class="newGameButton hover">
+    </p>
+  </form>
+
+  <!-- BMI Description -->
+  <div class="container description">
+    <h4>
+      Game Rules | Guess the Number
+    </h4>
+    <p>
+      Try and Guess a random number between 1 - 100
+      <br>
+      You have only 10 chances to guess.
+    </p>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

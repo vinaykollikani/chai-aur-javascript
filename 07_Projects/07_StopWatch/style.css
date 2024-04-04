@@ -64,6 +64,10 @@ h2, .timer {
   border-radius: 10px;
   background-color: #313131;
 }
+#milliseconds {
+  font-weight: 500;
+  text-shadow: none;
+}
 
 .buttons {
   margin: 0 2.4rem 1.2rem;
